@@ -1,0 +1,25 @@
+$header-blue: #1893e7;
+$main-blue: #085b96;
+$link-bg: #eaae00;
+
+/* Header */
+@import "header/header";
+@import "content/content";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
