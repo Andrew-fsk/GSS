@@ -15,6 +15,15 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function () {
+    $('.review-slider').slick({
+        dots: false,
+        arrows: false,
+    });
+});
+
+
+
 let contentSliders = document.querySelectorAll(".content-slide");
 let contentSlidersBtns = document.querySelectorAll(".content-slider-btn");
 
@@ -41,4 +50,53 @@ window.onclick = function (e) {
     if (elem.className.includes("content-slider-btn")) {
         this.hide(elem.id)
     }
+    if (elem.className.includes("menu-item")) {
+        this.show(elem.id)
+    }
 };
+
+
+
+
+let menuItems = document.querySelectorAll('.menu-item');
+let itemList = document.querySelectorAll('.item-list');
+
+for (let i = 0; i < menuItems.length; i++) {
+    menuItems[i].setAttribute('id', `${i}`);
+}
+
+
+
+for (let menuItem of menuItems) {
+    menuItem.addEventListener('mouseenter', e => {
+        showMenu(e.srcElement.id);
+    });
+}
+
+for (let item of itemList) {
+    item.addEventListener('mouseleave', e => {
+        hideMenu(item.index);
+    });
+}
+
+
+
+
+
+
+function hideMenu(id) {
+    for (let i = 0; i < itemList.length; i++) {
+        itemList[i].style.display = "none"
+    }
+}
+
+
+function showMenu(id) {
+    for (let i = 0; i < itemList.length; i++) {
+        if (i == id) {
+            itemList[i].style.display = "flex"
+        } else {
+            itemList[i].style.display = 'none'
+        }
+    }
+}

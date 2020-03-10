@@ -10,8 +10,8 @@
 
     <!-- Slick CSS -->
 
-    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="./plugins/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./plugins/slick/slick-theme.css" />
   </head>
   <body>
     <header class="header">
@@ -21,21 +21,21 @@
             <use xlink:href="img/sprite.svg#phone"></use>
           </svg>
           <div class="info__text-blue">Наш телефон:</div>
-          <div class="info__text-white">+ 7 701 779 72 78</div>
+          <a href="#" class="info__text-white">+ 7 701 779 72 78</a>
         </div>
         <div class="mail">
           <svg class="header-icon">
             <use xlink:href="img/sprite.svg#mail"></use>
           </svg>
           <div class="info__text-blue">e-mail:</div>
-          <div class="info__text-white">info@educationcentre.kz</div>
+          <a href="mailto:info@educationcentre.kz" class="info__text-white">info@educationcentre.kz</a>
         </div>
-        <div class="home">
+        <a href="#" class="home info__text-white">
           <svg class="header-icon">
             <use xlink:href="img/sprite.svg#home"></use>
           </svg>
           <div>Контакты</div>
-        </div>
+        </a>
       </div>
       <div class="menu">
         <a class="menu__logo-link" href="index.html">
@@ -45,45 +45,46 @@
           </div>
         </a>
         <nav>
-          <ul class="menu-list">
-            <li class="menu-item active-item">
-              <a href="#">
+          <ul class="menu">
+            <li class="menu-item">
+              <a href="#" class="menu-item-link">
                 <svg class="menu-icon">
                   <use xlink:href="img/sprite.svg#arrow"></use>
                 </svg>
                 главная</a
               >
+              
             </li>
-            <li class="menu-item">
-              <a href="#"
+            <li class="menu-item" >
+              <a href="#"  class="menu-item-link"
                 ><svg class="menu-icon">
                   <use xlink:href="img/sprite.svg#arrow"></use></svg
                 >тренинги<br />и семинары</a
               >
             </li>
             <li class="menu-item">
-              <a href="#"
+                <a href="#"  class="menu-item-link"
                 ><svg class="menu-icon">
                   <use xlink:href="img/sprite.svg#arrow"></use></svg
                 >международное<br />обучение</a
               >
             </li>
             <li class="menu-item">
-              <a href="#"
+              <a href="#" class="menu-item-link"
                 ><svg class="menu-icon">
                   <use xlink:href="img/sprite.svg#arrow"></use></svg
                 >корпоративное<br />обучение</a
               >
             </li>
             <li class="menu-item">
-              <a href="#"
+              <a href="#" class="menu-item-link"
                 ><svg class="menu-icon">
                   <use xlink:href="img/sprite.svg#arrow"></use></svg
                 >hr-консалтинг</a
               >
             </li>
             <li class="menu-item">
-              <a href="#"
+              <a href="#" class="menu-item-link"
                 ><svg class="menu-icon">
                   <use xlink:href="img/sprite.svg#arrow"></use></svg
                 >аналитика и<br />иследования</a
@@ -92,12 +93,18 @@
           </ul>
         </nav>
       </div>
-      <div class="anchors">
-        <a href="index.html#about" class="anchor anchor-border">О нас</a>
-        <a href="index.html#team" class="anchor anchor-border">Лекторы</a>
-        <a href="#" class="anchor anchor-border">Новости</a>
-        <a href="#" class="anchor">Отзывы</a>
-      </div>
+      <ul class="item-list">
+        <li class="list-item list-item-border"><a href="index.html#about">О нас</a></li>
+        <li class="list-item list-item-border"><a href="index.html#team">Лекторы</a></li>
+        <li class="list-item list-item-border"><a href="index.html#news">Новости</a></li>
+        <li class="list-item"><a href="index.html#review">Отзывы</a></li>
+      </ul>
+      <ul class="item-list">
+        <li class="list-item list-item-border">Другие</li>
+        <li class="list-item list-item-border">Пункты</li>
+        <li class="list-item list-item-border">Меню</li>
+        <li class="list-item">При наведении</li>
+      </ul>
     </header>
 
     <div class="call-wrap">
@@ -281,7 +288,9 @@
           </div>
           <div class="link-wrap">
             <a class="slide-link" href="#"
-              >Смотреть все тренинги и семинары
+              >Смотреть все тренинги и семинары<svg class="slider-icon">
+                <use xlink:href="img/sprite.svg#arrow"></use></svg
+            >
             </a>
           </div>
         </div>
@@ -522,20 +531,165 @@
           <div class="team-slide">
             <div class="team-slide">
               <img class="team-img" src="./img/team-4.png" alt="team-img">
-              <div class="last-name team-name">Архипов Дмитрий Анатолиевич</div>
+              <div class="team-name">Архипов Дмитрий Анатолиевич</div>
               <div class="team-pos">Международный тренер, мотивационный тренер</div>
             </div>
           </div>          
         </div>
         <div class="link-wrap">
           <a class="slide-link" href="#"
-            >Смотреть всех лекторов
+            >Смотреть всех лекторов<svg class="slider-icon">
+              <use xlink:href="img/sprite.svg#arrow"></use></svg
+          >
           </a>
         </div>
         </div>
       </div>
     </div>
+
+    <div class="news" id="news">
+      <div class="wrap wrap-content">
+        <div class="content-left team-left ">
+          <span>-</span>
+          <span>новости</span>
+        </div>
+        <div class="content-right">
+          <div class="news-row">
+            <div class="news-cell">
+              <div class="news-text">
+                <div class="news-date">12/12/2012</div>
+                <div class="news-title">Отчет по бизнес-завтраку "Гражданские споры"</div>
+                <div class="news-desc">Краткое описание новсти с основными фактами и явлениями. И еще парочку слов чтобы это всё выглядело бы красиво...</div>
+                <div class="news-link">
+                  <a href="#" class="more news-more">подробнее 
+                    <svg class="more-icon news-more-icon">
+                      <use xlink:href="img/sprite.svg#arrow"></use></svg></a>
+                </div>
+              </div>
+            </div>
+            <div class="news-cell">
+              <div class="news-text">
+                <div class="news-date">12/12/2012</div>
+                <div class="news-title">Отчет по бизнес-завтраку "Гражданские споры"</div>
+                <div class="news-desc">Краткое описание новсти с основными фактами и явлениями. И еще парочку слов чтобы это всё выглядело бы красиво...</div>
+                <div class="news-link">
+                  <a href="#" class="more news-more">подробнее 
+                    <svg class="more-icon news-more-icon">
+                      <use xlink:href="img/sprite.svg#arrow"></use></svg></a>
+                </div>
+              </div>
+            </div>
+            <div class="news-cell">
+              <div class="news-text">
+                <div class="news-date">12/12/2012</div>
+                <div class="news-title">Отчет по бизнес-завтраку "Гражданские споры"</div>
+                <div class="news-desc">Краткое описание новсти с основными фактами и явлениями. И еще парочку слов чтобы это всё выглядело бы красиво...</div>
+                <div class="news-link">
+                  <a href="#" class="more news-more">подробнее 
+                    <svg class="more-icon news-more-icon">
+                      <use xlink:href="img/sprite.svg#arrow"></use></svg></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="news-row">
+            <div class="news-cell">
+              <div class="news-text">
+                <div class="news-date">12/12/2012</div>
+                <div class="news-title">Отчет по бизнес-завтраку "Гражданские споры"</div>
+                <div class="news-desc">Краткое описание новсти с основными фактами и явлениями. И еще парочку слов чтобы это всё выглядело бы красиво...</div>
+                <div class="news-link">
+                  <a href="#" class="more news-more">подробнее 
+                    <svg class="more-icon news-more-icon">
+                      <use xlink:href="img/sprite.svg#arrow"></use></svg></a>
+                </div>
+              </div>
+            </div>
+            <div class="news-cell">
+              <div class="news-text">
+                <div class="news-date">12/12/2012</div>
+                <div class="news-title">Отчет по бизнес-завтраку "Гражданские споры"</div>
+                <div class="news-desc">Краткое описание новсти с основными фактами и явлениями. И еще парочку слов чтобы это всё выглядело бы красиво...</div>
+                <div class="news-link">
+                  <a href="#" class="more news-more">подробнее 
+                    <svg class="more-icon news-more-icon">
+                      <use xlink:href="img/sprite.svg#arrow"></use></svg></a>
+                </div>
+              </div>
+            </div>
+            <div class="news-cell">
+              <div class="news-text">
+                <div class="news-date">12/12/2012</div>
+                <div class="news-title">Отчет по бизнес-завтраку "Гражданские споры"</div>
+                <div class="news-desc">Краткое описание новсти с основными фактами и явлениями. И еще парочку слов чтобы это всё выглядело бы красиво...</div>
+                <div class="news-link">
+                  <a href="#" class="more news-more">подробнее 
+                    <svg class="more-icon news-more-icon">
+                      <use xlink:href="img/sprite.svg#arrow"></use></svg></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="link-wrap news-link-wrap">
+            <a class="slide-link" href="#">
+              Смотреть всех лекторов
+              <svg class="slider-icon">
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
     
+    <div class="review" id="review">
+      <div class="wrap wrap-content">
+        <div class="content-left team-left">
+          <span>-</span>
+          <span>Отзывы</span>
+        </div>
+        <div class="content-right">
+          <div class="review-slider">
+            <div>
+            <div class="review-slide">
+              <div class="left-side">"Очень хорошие лекции подготовки, очень благодарен "Центру обучения GSS" и лично Тулембаеву Алижану :) Интересные уроки, очень полезная информация и интесивная подготовка. Всем рекомендую!"</div>
+              <div class="right-side">
+                <svg class="review-icon">
+                  <use xlink:href="img/sprite.svg#person"></use>
+                </svg>
+                <div class="review-name">Alex Nikanov</div>
+                <div class="review-date">27 февраль 2018, 18:01</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="review-slide">
+              <div class="left-side">"Очень хорошие лекции подготовки, очень благодарен "Центру обучения GSS" и лично Тулембаеву Алижану :) Интересные уроки, очень полезная информация и интесивная подготовка. Всем рекомендую!"</div>
+              <div class="right-side">
+                <svg class="review-icon">
+                  <use xlink:href="img/sprite.svg#person"></use>
+                </svg>
+                <div class="review-name">Alex Nikanov</div>
+                <div class="review-date">27 февраль 2018, 18:01</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="review-slide">
+              <div class="left-side">"Очень хорошие лекции подготовки, очень благодарен "Центру обучения GSS" и лично Тулембаеву Алижану :) Интересные уроки, очень полезная информация и интесивная подготовка. Всем рекомендую!"</div>
+              <div class="right-side">
+                <svg class="review-icon">
+                  <use xlink:href="img/sprite.svg#person"></use>
+                </svg>
+                <div class="review-name">Alex Nikanov</div>
+                <div class="review-date">27 февраль 2018, 18:01</div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Scripts -->
 
@@ -549,7 +703,7 @@
     ></script>
     <script
       type="text/javascript"
-      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+      src="./plugins/slick/slick.min.js"
     ></script>
     <script src="js/app.js"></script>
   </body>
